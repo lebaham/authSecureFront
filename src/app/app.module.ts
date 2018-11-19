@@ -9,6 +9,7 @@ import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { AdminComponent } from './admin/admin.component';
 import { AppRoutingModule } from './app-routage.module';
+import { httpInterceptorProviders } from './auth/auth-interceptor';
  
 
 @NgModule({
@@ -25,7 +26,7 @@ import { AppRoutingModule } from './app-routage.module';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [httpInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
